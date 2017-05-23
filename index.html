@@ -13,10 +13,10 @@
           <th scope="row" ng-class="car.active(floor.n) &amp;&amp; 'active'">
             <span ng-show="car.active(floor.n)" ng-bind="car.state()"></span>
           </th>
-          <td>{{floor.title}}</th>
+          <td>{{floor.title}}</td>
           <td ng-class="floor.light">&#x25cf;</td>
           <td>
-            <button type="button">Call</button>
+            <button type="button" ng-click="panel.press(floor.n)">Call</button>
             <button type="button" ng-disabled="!car.canOpen(floor.n)">Open door</button>
           </td>
         <tr>
